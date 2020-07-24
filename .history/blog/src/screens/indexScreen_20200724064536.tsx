@@ -7,12 +7,12 @@ import { FlatList } from 'react-native-gesture-handler';
 
 
 const IndexScreen = () => {
-    const {state, addBlogPost} = useContext(Context);
+    const {data, addBlogPost} = useContext(BlogContext);
     return (
         <View style={styles.container}>
             <Button title="Add Post" onPress={addBlogPost}/>
-            <FlatList data={state} keyExtractor={blogPost=> blogPost.title} renderItem={({item})=> <Text>Blog #{item.title}</Text>}/>
-            <Text>Open up App.tsx to start working on your app ${state.length}!</Text>
+            <FlatList data={data} keyExtractor={blogPost=> blogPost.title} renderItem={({item})=> <Text>Blog #{item.title}</Text>}/>
+            <Text>Open up App.tsx to start working on your app ${data.length}!</Text>
             <StatusBar style="auto" />
         </View>
     );

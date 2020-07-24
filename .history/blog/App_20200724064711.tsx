@@ -12,13 +12,13 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
-    <Provider>
+    <BlogProvider>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="IndexScreen">
           <Stack.Screen name="IndexScreen" component={IndexScreen} options={{ title: "Index Screen" }} />
         </Stack.Navigator>
       </NavigationContainer>
-    </Provider>
+    </BlogProvider>
   );
 }
 

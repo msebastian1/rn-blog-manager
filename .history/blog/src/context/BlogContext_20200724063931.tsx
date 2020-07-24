@@ -17,8 +17,10 @@ const blogReducer = (state, action) => {
 
 }
 
-const addBlogPost = (blogDispatcher) => {
-    return () => { blogDispatcher({ type: 'ADD_BLOG' }) };
+const addBlogPost = () => {
+    blogDispatcher({ type: 'ADD_BLOG' })
 }
 
-export const { Context, Provider } = createDataContext(blogReducer, { addBlogPost }, initialState);
+export const { Context, Provider } = createDataContext(blogReducer, {addBlogPost}, initialState);
+
+export default BlogContext;

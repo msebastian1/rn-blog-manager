@@ -11,7 +11,7 @@ const IndexScreen = () => {
     return (
         <View style={styles.container}>
             <Button title="Add Post" onPress={addBlogPost}/>
-            <FlatList data={state} keyExtractor={blogPost=> blogPost.title} renderItem={({item})=> <Text>Blog #{item.title}</Text>}/>
+            <FlatList data={state} keyExtractor={blogPost=> blogPost.title} renderItem={({item})=> <Text>Blog #{blogPost.title}</Text>}/>
             <Text>Open up App.tsx to start working on your app ${state.length}!</Text>
             <StatusBar style="auto" />
         </View>
